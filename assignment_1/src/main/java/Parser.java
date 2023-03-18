@@ -1,13 +1,11 @@
-import DataModels.Monomial;
-
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Parser {
-    public static Map<Integer, Monomial> parsePolynom(String polynom) {
-        Map<Integer, Monomial> monomials = new TreeMap<>();
+    public static TreeMap<Integer, Monomial> parsePolynomial(String polynom) {
+        TreeMap<Integer, Monomial> monomials = new TreeMap<>();
 
         int coefficient;
         int exponent;
@@ -20,7 +18,7 @@ public class Parser {
             int index = monom.indexOf('^');
 
             coefficient = Integer.parseInt(monom.substring(0, index - 1));
-            exponent =  Integer.parseInt(monom.substring(index + 1, monom.length()));
+            exponent =  Integer.parseInt(monom.substring(index + 1));
 
             //System.out.println(coefficient +"x^" + exponent);
 

@@ -1,21 +1,19 @@
-package DataModels;
-
 public class Monomial {
 
-    private int coefficient;
+    private double coefficient;
 
     private int exponent;
 
-    public Monomial(int coefficient, int exponent) {
+    public Monomial(double coefficient, int exponent) {
         this.coefficient = coefficient;
         this.exponent = exponent;
     }
 
-    public int getCoefficient() {
+    public double getCoefficient() {
         return coefficient;
     }
 
-    public void setCoefficient(int coefficient) {
+    public void setCoefficient(double coefficient) {
         this.coefficient = coefficient;
     }
 
