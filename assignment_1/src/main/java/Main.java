@@ -18,5 +18,7 @@ public class Main {
         for (Map.Entry<Integer, Monomial> entry : polynomial2.getMap().descendingMap().entrySet()) {
             System.out.println("key:" + entry.getKey() + " " + entry.getValue().toString());
         }
+
+        new PolynomialCalculatorUI();
     }
 }
