@@ -54,11 +54,11 @@ public class Operations {
     public static Polynomial multiplyPolynomials(Polynomial polynomial, Polynomial secondPolynomial) {
         Polynomial multipliedPolynomials = new Polynomial();
 
-        for (Map.Entry<Integer, Monomial> entry : polynomial.getMap().entrySet()) {
+        for (Map.Entry<Integer, Monomial> entry : polynomial.getMap().descendingMap().entrySet()) {
             int exponent = entry.getKey();
             Monomial monomial = entry.getValue();
 
-            for (Map.Entry<Integer, Monomial> secondEntry : secondPolynomial.getMap().entrySet()) {
+            for (Map.Entry<Integer, Monomial> secondEntry : secondPolynomial.getMap().descendingMap().entrySet()) {
                 int secondExponent = secondEntry.getKey();
                 Monomial secondMonomial = secondEntry.getValue();
 
