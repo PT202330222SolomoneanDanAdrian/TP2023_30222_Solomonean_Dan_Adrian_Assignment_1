@@ -34,4 +34,19 @@ public class Monomial {
 
         return coefficient + "x^" + exponent;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj) {
+            return true;
+        }
+
+        if(obj.getClass() != this.getClass()){
+            return false;
+        }
+
+        Monomial monomial = (Monomial) obj;
+
+        return (this.exponent == monomial.getExponent() && this.coefficient == monomial.getCoefficient());
+    }
 }
