@@ -1,3 +1,5 @@
+package DataModels;
+
 public class Monomial {
 
     private double coefficient;

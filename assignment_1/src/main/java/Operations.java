@@ -1,5 +1,7 @@
+import DataModels.Monomial;
+import DataModels.Polynomial;
+
 import java.util.Map;
-import java.util.TreeMap;
 
 public class Operations {
 
@@ -65,8 +67,8 @@ public class Operations {
                 int addedExponenent = exponent + secondExponent;
                 double coefficient = monomial.getCoefficient() * secondMonomial.getCoefficient();
 
-                if (multipliedPolynomials.getMap().containsKey(exponent)) {
-                    coefficient += multipliedPolynomials.getMap().get(exponent).getCoefficient();
+                if (multipliedPolynomials.getMap().containsKey(addedExponenent)) {
+                    coefficient += multipliedPolynomials.getMap().get(addedExponenent).getCoefficient();
                 }
 
                 multipliedPolynomials.getMap().put(addedExponenent, new Monomial(coefficient, addedExponenent));

@@ -1,6 +1,8 @@
+import DataModels.Monomial;
+import DataModels.Polynomial;
+import Parser.Parser;
+
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Map;
 
 public class PolynomialCalculatorUI extends JFrame {
