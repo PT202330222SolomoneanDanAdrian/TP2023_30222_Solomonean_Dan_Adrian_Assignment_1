@@ -1,6 +1,9 @@
+package UI;
+
+import BusinessLogic.Operations;
 import DataModels.Monomial;
 import DataModels.Polynomial;
-import Parser.Parser;
+import BusinessLogic.Parser;
 
 import javax.swing.*;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package Parser;
+package BusinessLogic;
 
 import DataModels.Monomial;
 

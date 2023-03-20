@@ -1,5 +1,7 @@
+import BusinessLogic.Operations;
 import DataModels.Monomial;
 import DataModels.Polynomial;
+import UI.PolynomialCalculatorUI;
 
 import java.util.Map;
 
@@ -16,15 +18,16 @@ public class Main {
         //System.out.println(polynomial.equals(polynomial1));
 
 
-//            DataModels.Polynomial polynomial2 = Operations.addPolynomials(polynomial, polynomial1);
-        //DataModels.Polynomial polynomial2 = Operations.subtractPolynomials(polynomial, polynomial1);
-        //DataModels.Polynomial polynomial2 = Operations.integratePolynomial(polynomial1);
-        Polynomial polynomial2 = Operations.multiplyPolynomials(polynomial, polynomial1);
+//            DataModels.Polynomial polynomial2 = BusinessLogic.Operations.addPolynomials(polynomial, polynomial1);
+        //DataModels.Polynomial polynomial2 = BusinessLogic.Operations.subtractPolynomials(polynomial, polynomial1);
+        //DataModels.Polynomial polynomial2 = BusinessLogic.Operations.integratePolynomial(polynomial1);
+        Polynomial polynomial2 = Operations.addPolynomials(polynomial, polynomial1);
+
 
         for (Map.Entry<Integer, Monomial> entry : polynomial2.getMap().descendingMap().entrySet()) {
             System.out.println("key:" + entry.getKey() + " " + entry.getValue().toString());
         }
 
-        //new PolynomialCalculatorUI();
+        new PolynomialCalculatorUI();
     }
 }

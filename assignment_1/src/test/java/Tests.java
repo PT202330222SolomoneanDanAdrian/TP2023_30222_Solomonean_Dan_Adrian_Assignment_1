@@ -1,12 +1,13 @@
+import BusinessLogic.Operations;
 import DataModels.Monomial;
 import DataModels.Polynomial;
-import Parser.Parser;
+import BusinessLogic.Parser;
 import org.junit.Test;
 
 import java.util.TreeMap;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+
 
 public class Tests {
 
@@ -56,7 +57,7 @@ public class Tests {
 //        DataModels.Polynomial emptyPolynomial = new DataModels.Polynomial("");
 //        DataModels.Polynomial polynomial = new DataModels.Polynomial("+1x^5-2x^4+6x^3");
 //
-//        DataModels.Polynomial result = Operations.addPolynomials(polynomial, emptyPolynomial);
+//        DataModels.Polynomial result = BusinessLogic.Operations.addPolynomials(polynomial, emptyPolynomial);
 //
 //        assertEquals(polynomial.getMap().toString(), result.getMap().toString());
 //    }
@@ -65,7 +66,7 @@ public class Tests {
 //    public void addingAPolynomialToItself() {
 //        DataModels.Polynomial p1 = new DataModels.Polynomial("+2x^2+3x^1");
 //        DataModels.Polynomial p2 = new DataModels.Polynomial("+2x^2+3x^1");
-//        DataModels.Polynomial result = Operations.addPolynomials(p1, p2);
+//        DataModels.Polynomial result = BusinessLogic.Operations.addPolynomials(p1, p2);
 //        assertEquals(new DataModels.Polynomial("+4x^2+6x^1").getMap().toString(), result.getMap().toString());
 //    }
 }
