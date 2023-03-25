@@ -29,10 +29,10 @@ public class Monomial {
 
     public String toString() {
         if (coefficient >= 0) {
-            return "+" + coefficient + "x^" + exponent;
+            return "+" + String.format("%.1f", coefficient) + "x^" + exponent;
         }
 
-        return coefficient + "x^" + exponent;
+        return String.format("%.1f", coefficient) + "x^" + exponent;
     }
 
     @Override
@@ -47,6 +47,6 @@ public class Monomial {
 
         Monomial monomial = (Monomial) obj;
 
-        return (this.exponent == monomial.getExponent() && this.coefficient == monomial.getCoefficient());
+        return (this.exponent == monomial.getExponent() && Double.compare(this.coefficient, monomial.getCoefficient()) == 0);
     }
 }

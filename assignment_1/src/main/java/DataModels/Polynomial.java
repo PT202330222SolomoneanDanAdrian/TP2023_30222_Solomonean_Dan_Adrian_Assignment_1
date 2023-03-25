@@ -1,6 +1,7 @@
 package DataModels;
 
 import BusinessLogic.Parser;
+import Exceptions.WrongFormatException;
 
 import java.util.TreeMap;
 
@@ -11,7 +12,7 @@ public class Polynomial{
 
     }
 
-    public Polynomial(String polyonomial) {
+    public Polynomial(String polyonomial) throws WrongFormatException {
         this.map = Parser.parsePolynomial(polyonomial);
     }
 
