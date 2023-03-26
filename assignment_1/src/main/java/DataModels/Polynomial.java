@@ -6,7 +6,7 @@ import Exceptions.WrongFormatException;
 import java.util.TreeMap;
 
 public class Polynomial{
-    TreeMap<Integer, Monomial> map = new TreeMap<>();
+    private TreeMap<Integer, Monomial> map = new TreeMap<>();
 
     public Polynomial() {
 

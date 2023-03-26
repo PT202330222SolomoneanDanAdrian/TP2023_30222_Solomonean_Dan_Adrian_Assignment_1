@@ -115,11 +115,45 @@ public class Tests {
         }
     }
 
+    @Test
+    public void havingTwoPolynomials_WhenAddingThem_TheProperResultIsGiven() throws WrongFormatException {
+        Polynomial result = Operations.addPolynomials(polynomial, secondPolynomial);
+
+        assertEquals(Parser.parsePolynomial("+10x^7+4x^5+4x^4+6x^3"), result.getMap());
+    }
+
+    @Test
+    public void havingTwoPolynomials_WhenSubtractingThem_TheProperResultIsGiven() throws WrongFormatException {
+        Polynomial result = Operations.subtractPolynomials(polynomial, secondPolynomial);
+
+        assertEquals(Parser.parsePolynomial("-10x^7-2x^5+0x^4+6x^3"), result.getMap());
+    }
+
+    @Test
+    public void havingTwoPolynomials_WhenMultiplyingThem_TheProperResultIsGiven() throws WrongFormatException {
+        Polynomial result = Operations.multiplyPolynomials(polynomial, secondPolynomial);
+
+        assertEquals(Parser.parsePolynomial("+10x^12+20x^11+63x^10+8x^9+22x^8+12x^7"), result.getMap());
+    }
+
+
     //failed tests
 //    @Test
 //    public void havingAPolynomial_WhenIntegratingIt_TheExpectedResultIsGiven() throws WrongFormatException {
 //        Polynomial integratedPolynomial = new Polynomial("+1x^5-2x^4+6x^3");
 //
 //        assertEquals(Operations.integratePolynomial(polynomial).getMap(), polynomial.getMap());
+//    }
+
+//    @Test
+//    public void havingAPolynomial_WhenIntegratingIt_TheExpectedResultIsReturned() throws WrongFormatException {
+//        TreeMap<Integer, Monomial> expectedMap = new TreeMap<>();
+//        Polynomial integratedPolynomial = Operations.integratePolynomial(new Polynomial("+1x^5+2x^4+6x^3"));
+//
+//        expectedMap.put(6, new Monomial(0.2, 6));
+//        expectedMap.put(5, new Monomial(0.4, 5));
+//        expectedMap.put(4, new Monomial(1.5, 5));
+//
+//        assertEquals(expectedMap, integratedPolynomial.getMap());
 //    }
 }
