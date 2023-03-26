@@ -116,7 +116,6 @@ public class PolynomialCalculatorUI extends JFrame {
 
                 for (Map.Entry<Integer, Monomial> entry : result.getMap().descendingMap().entrySet()) {
                     resultedPolynomial += entry.getValue().toString();
-                    System.out.println(entry.getValue().toString());
                 }
 
                 this.polynomialResult.setText(resultedPolynomial);
